@@ -10,6 +10,7 @@ SELECT
 FROM
     activity a
 ) 
+
 SELECT 
 	player_id, 
 	device_id 
