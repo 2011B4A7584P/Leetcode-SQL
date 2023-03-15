@@ -2,7 +2,7 @@ SELECT
     e1.name AS employee
 FROM 
     employee e1 
-JOIN 
+LEFT JOIN 
     employee e2 
 ON  
 	e1.managerid = e2.id
