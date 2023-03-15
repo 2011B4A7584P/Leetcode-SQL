@@ -1,4 +1,4 @@
-SELECT department, employee, salary FROM
+WITH ranked_departmental_salaries(department, employee, salary, salary_rank) AS 
 (SELECT 
     d.name AS department,
     e.name AS employee,
@@ -8,5 +8,6 @@ FROM
     employee e
 JOIN 
     department d
-ON e.departmentId = d.id) department_ranked_salaries
-WHERE salary_rank <=3;
+ON e.departmentId = d.id)
+SELECT department, employee, salary FROM ranked_departmental_salaries r
+WHERE r.salary_rank <=3;
