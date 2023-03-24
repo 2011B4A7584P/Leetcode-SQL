@@ -1,5 +1,5 @@
 import git
-import os
+
 local_repository_location = 'C:/Users/91702/Desktop/Leetcode-SQL'
 
 repo = git.Repo(local_repository_location)
