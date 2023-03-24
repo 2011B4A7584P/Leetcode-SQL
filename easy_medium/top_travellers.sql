@@ -22,4 +22,5 @@ SELECT
 FROM
     user_id_distance_info
 ORDER BY 
-travelled_distance DESC, name ASC;    
+	travelled_distance DESC, 
+	name ASC;    
