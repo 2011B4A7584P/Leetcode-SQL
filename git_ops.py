@@ -5,7 +5,7 @@ local_repository_location = 'C:/Users/91702/Desktop/Leetcode-SQL'
 repo = git.Repo(local_repository_location)
 
 for file in repo.untracked_files:
-    
+    print()
     print('Untracked file for current git op')
     print('File : ', file)
     
@@ -15,7 +15,7 @@ for file in repo.untracked_files:
     print('Leetcode problem category : ', problem_category)
     print('Leetcode problem : ', problem_statement)
     
-    if _ in problem_category:
+    if '_' in problem_category:
         repo.index.commit('added solution to ' + problem_statement + ' leetcode category ' + problem_category + ' problem for review')
     else:
         repo.index.commit('added solution to ' + problem_statement + ' leetcode category ' + problem_category + ' problem')
