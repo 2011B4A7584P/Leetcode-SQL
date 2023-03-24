@@ -16,6 +16,7 @@ for file in repo.untracked_files:
     print('Leetcode problem : ', problem_statement)
     
     if '_' in problem_category:
+        problem_category = '->'.join(problem_category.split('_'))
         repo.index.commit('added solution to ' + problem_statement + ' leetcode category ' + problem_category + ' problem for review')
     else:
         repo.index.commit('added solution to ' + problem_statement + ' leetcode category ' + problem_category + ' problem')
