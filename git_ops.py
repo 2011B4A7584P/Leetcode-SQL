@@ -20,4 +20,4 @@ for file in repo.untracked_files:
     else:
         repo.index.commit('added solution to ' + problem_statement + ' leetcode category ' + problem_category + ' problem')
     
-    repo.remote.origin.push()
+    repo.remote('origin').push()
